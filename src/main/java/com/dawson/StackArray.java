@@ -49,12 +49,12 @@ public class StackArray<T>{
         return this.count == this.size;
     }
     /**
-    * This method is used to return the size of stack. 
+    * This method is used to return the number of element in the stack. 
     * @param null
-    * @return int This returns the size of stack.
+    * @return int This returns the number of element in the stack.
     */
     public int size(){
-        return this.size;
+        return this.count;
     }
     /**
     * This method is used to add two integers. This is
@@ -86,7 +86,7 @@ public class StackArray<T>{
     */
 
     private void resize(){
-        
+
         if (this.size == 0){
             this.size = 1;
         }else{
