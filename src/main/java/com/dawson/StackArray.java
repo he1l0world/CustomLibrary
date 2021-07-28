@@ -86,7 +86,13 @@ public class StackArray<T>{
     */
 
     private void resize(){
-        this.size *= 2;
+        
+        if (this.size == 0){
+            this.size = 1;
+        }else{
+            this.size *= 2;
+        }
+
         T[] newArray = (T[]) new Object[this.size];
         for(int index = 0;  index < this.count; index++){
             newArray[index] = this.array[index];
