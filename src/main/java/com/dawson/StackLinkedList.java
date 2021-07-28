@@ -94,7 +94,7 @@ public class StackLinkedList<T> {
         if(this.isEmpty()){
             return null;
         }
-        T item = this.head.item;
+        T item = (T) this.head.item;
         this.head = this.head.next;
         return item;
     }
