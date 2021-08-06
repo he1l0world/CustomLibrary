@@ -75,12 +75,14 @@ public class StackLinkedList<T> {
      * @param element element is the generic type to store in the stack
      */
     public void push(T element){
-        if ( !this.isEmpty() ){
+        if ( this.isEmpty() ){
             this.head = new Node(element);
+            this.count++;
         }else{
             Node temp = new Node(element);
-            temp.next = this.head.next;
+            temp.next = this.head;
             this.head = temp;
+            this.count++;
         }
     }
 
@@ -96,6 +98,7 @@ public class StackLinkedList<T> {
         }
         T item = (T) this.head.item;
         this.head = this.head.next;
+        this.count--;
         return item;
     }
 
